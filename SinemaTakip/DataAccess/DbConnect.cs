@@ -48,5 +48,27 @@ namespace SinemaTakip.DataAccess
                 insertCommand.ExecuteNonQuery();
             }
         }
+
+
+        public void WriteTosessions(Seans seans)
+        {
+            using (SqliteConnection connection = new SqliteConnection("Data Source=hello.db"))
+            {
+                connection.Open();
+                var insertCommand = connection.CreateCommand();
+                insertCommand.CommandText = @"
+                INSERT INTO sessions (film_id, salon_id, start_time, duration, price) 
+                VALUES ($film_id, $salon_id, $start_time, $duration, $price)";
+
+
+                insertCommand.Parameters.AddWithValue("$film_id", seans.FilmId);
+                insertCommand.Parameters.AddWithValue("$salon_id", seans.SalonId);
+                insertCommand.Parameters.AddWithValue("$start_time", seans.StartTime);
+                insertCommand.Parameters.AddWithValue("$duration", seans.Duration);
+                insertCommand.Parameters.AddWithValue("$price", seans.Price);
+
+                insertCommand.ExecuteNonQuery();
+            }
+        }
     }
 }

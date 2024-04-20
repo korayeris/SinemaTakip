@@ -34,7 +34,7 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             txtUcret = new TextBox();
             txtSure = new TextBox();
-            textBaslangic = new TextBox();
+            txtBaslangic = new TextBox();
             txtSalonId = new TextBox();
             Salon = new Label();
             label3 = new Label();
@@ -91,7 +91,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.Controls.Add(txtUcret, 1, 4);
             tableLayoutPanel2.Controls.Add(txtSure, 1, 3);
-            tableLayoutPanel2.Controls.Add(textBaslangic, 1, 2);
+            tableLayoutPanel2.Controls.Add(txtBaslangic, 1, 2);
             tableLayoutPanel2.Controls.Add(txtSalonId, 1, 1);
             tableLayoutPanel2.Controls.Add(Salon, 0, 1);
             tableLayoutPanel2.Controls.Add(label3, 0, 0);
@@ -130,14 +130,14 @@
             txtSure.Size = new Size(226, 39);
             txtSure.TabIndex = 14;
             // 
-            // textBaslangic
+            // txtBaslangic
             // 
-            textBaslangic.Anchor = AnchorStyles.Left;
-            textBaslangic.Font = new Font("Segoe UI", 14F);
-            textBaslangic.Location = new Point(390, 165);
-            textBaslangic.Name = "textBaslangic";
-            textBaslangic.Size = new Size(226, 39);
-            textBaslangic.TabIndex = 13;
+            txtBaslangic.Anchor = AnchorStyles.Left;
+            txtBaslangic.Font = new Font("Segoe UI", 14F);
+            txtBaslangic.Location = new Point(390, 165);
+            txtBaslangic.Name = "txtBaslangic";
+            txtBaslangic.Size = new Size(226, 39);
+            txtBaslangic.TabIndex = 13;
             // 
             // txtSalonId
             // 
@@ -189,6 +189,7 @@
             btnOnay.TabIndex = 5;
             btnOnay.Text = "Onayla";
             btnOnay.UseVisualStyleBackColor = true;
+            btnOnay.Click += btnOnay_Click;
             // 
             // label2
             // 
@@ -257,6 +258,6 @@
         private Label label5;
         private TextBox txtUcret;
         private TextBox txtSure;
-        private TextBox textBaslangic;
+        private TextBox txtBaslangic;
     }
 }
