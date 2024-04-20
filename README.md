@@ -57,5 +57,7 @@ Databasein genel görünüşü:
 
 
 -C# programlama dili kullanılmıştır
-Windows Forms (WinForms) teknolojisi
+-Windows Forms (WinForms) teknolojisi kullanılmıştır
+-Database için SqLite kullanılmıştır 
 
+Koray ERİŞ  20210108050
